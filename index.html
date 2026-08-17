@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road2Funding | Funding Readiness &amp; Capital Strategy</title>
+  <meta name="description" content="Road2Funding helps entrepreneurs prepare stronger funding profiles, organize documentation, and approach business financing with a clear strategy.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <script>
+    window.FontAwesomeConfig = {
+      autoReplaceSvg: 'nest',
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=PT+Sans:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Mukta:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Fira+Code:wght@300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap">
+  
+  <style>
+    * {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    
+    .h-screen {
+      height: 100vh;
+    }
+    
+    .min-h-screen {
+      min-height: 100vh;
+    }
+    
+    .fa, .fas, .far, .fal, .fab {
+      font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen m-0 p-0 bg-white">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  
+  :root {
+    --dark-green: #0B2B18;
+    --lime-green: #3E7B4D;
+    --forest-green: #1B4C27;
+    --slate-gray: #55606E;
+    --brand-light: #F1F5F2;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--slate-gray);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-green);
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(90deg, #0A100C, #1B4C27);
+  }
+
+  .bg-gradient-hover {
+    background: linear-gradient(90deg, #123D22, #2F6B3D);
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #0B2B18, #2F6B3D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, #0A100C, #1B4C27);
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(27, 76, 39, 0.25);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #123D22, #2F6B3D);
+    box-shadow: 0 6px 20px rgba(27, 76, 39, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid #1B4C27;
+    outline-offset: 2px;
+  }
+
+  .btn-secondary {
+    border: 2px solid #1B4C27;
+    color: #1B4C27;
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #1B4C27;
+    color: #FFFFFF;
+  }
+
+  .btn-secondary:focus-visible {
+    outline: 2px solid #1B4C27;
+    outline-offset: 2px;
+  }
+
+  /* Brand logo sizing: the source artwork is intentionally wide, so size it
+     by width instead of forcing it into a small fixed-height slot. */
+  .header-logo-link {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .header-logo {
+    display: block;
+    width: clamp(185px, 18vw, 230px);
+    height: auto;
+  }
+
+  .footer-logo-plate {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 1rem;
+    padding: 0.65rem 0.9rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  }
+
+  .footer-logo {
+    display: block;
+    width: min(270px, 72vw);
+    height: auto;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar for vertical */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 20px;
+  }
+
+  /* Hide horizontal scrollbar */
+  .hide-scroll-x {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scroll-x::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Accordion animation */
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] summary ~ * {
+    animation: sweep .3s ease-in-out;
+  }
+  @keyframes sweep {
+    0%    {opacity: 0; transform: translateY(-10px)}
+    100%  {opacity: 1; transform: translateY(0)}
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div id="main-content" class="custom-scrollbar overflow-y-auto h-screen w-full bg-white">
+
+  <!-- HEADER -->
+  <header id="header-main" class="fixed w-full top-0 z-50 bg-[#F9FBF9]/95 backdrop-blur-md border-b border-[#1B4C27]/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-24 gap-4">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center cursor-pointer">
+          <a href="#" aria-label="Road2Funding Home" class="header-logo-link">
+            <img src="road2funding-logo.png" alt="Road2Funding" class="header-logo" width="1000" height="406" fetchpriority="high">
+          </a>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex space-x-8 items-center">
+          <a href="#" class="text-[#55606E] hover:text-[#1B4C27] font-medium text-sm transition-colors">Home</a>
+          <a href="#section-how-it-works" class="text-[#55606E] hover:text-[#1B4C27] font-medium text-sm transition-colors">How It Works</a>
+          <a href="#section-services" class="text-[#55606E] hover:text-[#1B4C27] font-medium text-sm transition-colors">Funding Programs</a>
+          <a href="#section-why-exists" class="text-[#55606E] hover:text-[#1B4C27] font-medium text-sm transition-colors">About Us</a>
+          <a href="#section-faqs" class="text-[#55606E] hover:text-[#1B4C27] font-medium text-sm transition-colors">FAQs</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden lg:flex items-center">
+          <a href="https://form.road2funding.com/funding-evaluation" class="btn-primary px-6 py-2.5 rounded-full font-semibold text-sm">
+            Get My Funding Strategy
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="lg:hidden flex items-center">
+          <button class="text-[#0B2B18] hover:text-[#1B4C27] focus:outline-none p-2">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="section-hero" class="relative pt-36 pb-20 lg:pt-52 lg:pb-32 bg-[#F1F5F2] overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+      <div class="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full bg-gradient-to-br from-[#1B4C27]/15 to-[#2F6B3D]/10 blur-3xl"></div>
+      <div class="absolute bottom-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-[#1B4C27]/5 to-transparent blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+        
+        <!-- Hero Content -->
+        <div class="lg:col-span-6 text-center lg:text-left mb-16 lg:mb-0">
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-white border border-[#1B4C27]/20 text-[#1B4C27] text-xs font-semibold tracking-wide uppercase mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#3E7B4D] mr-2"></span>
+            Funding Starts With Strategy
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0B2B18] leading-[1.1] mb-6">
+            Unlock the Capital That <span class="text-gradient">Moves Your Business</span> Forward
+          </h1>
+          
+          <p class="text-lg sm:text-xl text-[#55606E] mb-10 max-w-[680px] mx-auto lg:mx-0 leading-relaxed">
+            Road2Funding delivers personalized guidance and proven strategies that help entrepreneurs secure the right funding at the right time.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+            <a href="https://form.road2funding.com/funding-evaluation" class="btn-primary w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-base text-center">
+              Get My Funding Strategy
+            </a>
+            <a href="#section-how-it-works" class="btn-secondary w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-base text-center">
+              How Our Approach Works
+            </a>
+          </div>
+          
+          <div class="flex items-center justify-center lg:justify-start text-sm text-[#55606E] font-medium">
+            <i class="fa-solid fa-shield-halved text-[#1B4C27] mr-2 text-lg"></i>
+            Private guidance. Responsible strategy. Funding confidence.
+          </div>
+        </div>
+        
+        <!-- Hero Image/Graphic -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50">
+            <div class="absolute inset-0 bg-gradient-to-tr from-[#0B2B18]/20 to-transparent mix-blend-multiply z-10"></div>
+            <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Paved road splitting into two diverging paths representing strategic funding choices" class="w-full h-auto object-cover object-center aspect-[4/3]">
+            
+            <!-- Floating Element -->
+            <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl z-20 border border-gray-100 hidden md:flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+              <div class="w-12 h-12 rounded-full bg-[#F1F5F2] flex items-center justify-center text-[#1B4C27]">
+                <i class="fa-solid fa-chart-pie text-xl"></i>
+              </div>
+              <div>
+                <p class="text-xs text-[#55606E] font-medium uppercase tracking-wider">Funding Readiness</p>
+                <p class="text-xl font-bold text-[#0B2B18]">Optimized</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OPPORTUNITY CARDS SECTION -->
+  <section id="section-opportunities" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0B2B18] mb-4 tracking-tight">Transform Preparation Into Funding Power</h2>
+        <p class="text-lg text-[#55606E]">Strategic positioning opens doors to capital that accelerates your vision.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div id="card-opp-working-capital" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">  
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 rounded-xl bg-[#F1F5F2] flex items-center justify-center mb-6 group-hover:bg-[#1B4C27] transition-colors duration-300">
+            <i class="fa-solid fa-money-bill-wave text-2xl text-[#1B4C27] group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Working Capital</h3>
+          <p class="text-[#55606E] leading-relaxed">Secure the liquidity needed to manage daily operations, cover payroll, and navigate seasonal fluctuations with ease.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div id="card-opp-equipment" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 rounded-xl bg-[#F1F5F2] flex items-center justify-center mb-6 group-hover:bg-[#1B4C27] transition-colors duration-300">
+            <i class="fa-solid fa-truck-fast text-2xl text-[#1B4C27] group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Equipment Financing</h3>
+          <p class="text-[#55606E] leading-relaxed">Upgrade technology, purchase heavy machinery, or expand your fleet without depleting your cash reserves.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div id="card-opp-real-estate" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 rounded-xl bg-[#F1F5F2] flex items-center justify-center mb-6 group-hover:bg-[#1B4C27] transition-colors duration-300">
+            <i class="fa-solid fa-building text-2xl text-[#1B4C27] group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Real-Estate Acquisition</h3>
+          <p class="text-[#55606E] leading-relaxed">Position your business to purchase commercial property, expand facilities, or transition from leasing to owning.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div id="card-opp-loc" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 rounded-xl bg-[#F1F5F2] flex items-center justify-center mb-6 group-hover:bg-[#1B4C27] transition-colors duration-300">
+            <i class="fa-regular fa-credit-card text-2xl text-[#1B4C27] group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Line-of-Credit Readiness</h3>
+          <p class="text-[#55606E] leading-relaxed">Establish revolving credit facilities to ensure you always have access to funds when unexpected opportunities arise.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div id="card-opp-terms" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 rounded-xl bg-[#F1F5F2] flex items-center justify-center mb-6 group-hover:bg-[#1B4C27] transition-colors duration-300">
+            <i class="fa-solid fa-file-contract text-2xl text-[#1B4C27] group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Better Loan Terms</h3>
+          <p class="text-[#55606E] leading-relaxed">Optimize your financial profile to negotiate lower interest rates, longer repayment periods, and favorable covenants.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div id="card-opp-growth" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 rounded-xl bg-[#F1F5F2] flex items-center justify-center mb-6 group-hover:bg-[#1B4C27] transition-colors duration-300">
+            <i class="fa-solid fa-chart-line text-2xl text-[#1B4C27] group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Business Growth</h3>
+          <p class="text-[#55606E] leading-relaxed">Fund marketing campaigns, hire key personnel, or launch new product lines to aggressively scale your market share.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY EXISTS SECTION -->
+  <section id="section-why-exists" class="py-24 bg-[#F1F5F2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Story Content -->
+        <div class="mb-12 lg:mb-0">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#0B2B18] mb-6 tracking-tight leading-tight">
+            Preparation Becomes Powerful When It’s <span class="text-gradient">Funding-Focused</span>
+          </h2>
+          
+          <div class="space-y-6 text-lg text-[#55606E] max-w-[680px]">
+            <p>
+              Many exceptional businesses struggle to secure capital not because they lack potential, but because they lack financing clarity. Lenders speak a specific language of risk and readiness that most entrepreneurs never learn.
+            </p>
+            <p>
+              We built Road2Funding to bridge this critical gap. We recognized that applying for loans without a strategic foundation often leads to rejections, unfavorable terms, or damaged credit profiles.
+            </p>
+            <p>
+              Our approach shifts the dynamic. Instead of hoping for approval, we help you engineer it. By aligning your business metrics, documentation, and narrative with lender expectations, we turn the funding process from a gamble into a calculated strategy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dark Panel Checklist -->
+        <div class="relative">
+          <!-- Decorative background offset -->
+          <div class="absolute inset-0 bg-gradient-primary rounded-3xl transform translate-x-4 translate-y-4 opacity-50"></div>  
+          
+          <div class="relative bg-[#0B2B18] rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            <!-- Abstract shapes -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-[#1B4C27] opacity-10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-[#3E7B4D] opacity-10 rounded-full blur-2xl -ml-10 -mb-10 pointer-events-none"></div>
+            
+            <h3 class="text-2xl font-bold text-white mb-8 relative z-10">The Road2Funding Advantage</h3>
+            
+            <ul class="space-y-6 relative z-10">
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-[#3E7B4D]/20 flex items-center justify-center mt-1">
+                  <i class="fa-solid fa-check text-[#3E7B4D]"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold text-white">Understand current profile</h4>
+                  <p class="text-gray-300 text-sm mt-1">Gain crystal clarity on how lenders view your business today.</p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-[#3E7B4D]/20 flex items-center justify-center mt-1">
+                  <i class="fa-solid fa-check text-[#3E7B4D]"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold text-white">Strengthen strategic gaps</h4>
+                  <p class="text-gray-300 text-sm mt-1">Proactively address weaknesses before a lender ever sees them.</p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-[#3E7B4D]/20 flex items-center justify-center mt-1">
+                  <i class="fa-solid fa-check text-[#3E7B4D]"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold text-white">Approach lenders with confidence</h4>
+                  <p class="text-gray-300 text-sm mt-1">Execute a targeted plan to secure the best possible capital.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID SECTION -->
+  <section id="section-services" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0B2B18] mb-4 tracking-tight">Private Coaching & Funding Readiness Programs</h2>
+        <p class="text-lg text-[#55606E]">Comprehensive solutions designed to elevate your financial profile and secure capital.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        
+        <!-- Service 1 -->
+        <div id="card-service-eval" class="flex flex-col">
+          <div class="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 shadow-md">
+            <i class="fa-solid fa-magnifying-glass-chart text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Readiness Evaluation</h3>
+          <p class="text-[#55606E] leading-relaxed flex-grow">A deep-dive diagnostic of your current financial health, credit profile, and operational metrics to determine your immediate fundability.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div id="card-service-coaching" class="flex flex-col">
+          <div class="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 shadow-md">
+            <i class="fa-solid fa-user-tie text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Capital Strategy Coaching</h3>
+          <p class="text-[#55606E] leading-relaxed flex-grow">One-on-one private guidance to map out a customized funding timeline, aligning capital acquisition with your specific business growth goals.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div id="card-service-match" class="flex flex-col">
+          <div class="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 shadow-md">
+            <i class="fa-solid fa-handshake-angle text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Lender Match Plan</h3>
+          <p class="text-[#55606E] leading-relaxed flex-grow">Strategic identification of the right lending institutions and products that fit your unique profile, increasing approval odds.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div id="card-service-docs" class="flex flex-col">
+          <div class="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 shadow-md">
+            <i class="fa-solid fa-folder-open text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Documentation Prep</h3>
+          <p class="text-[#55606E] leading-relaxed flex-grow">Meticulous organization and review of business plans, financial statements, and tax returns to present a flawless package to underwriters.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div id="card-service-credit" class="flex flex-col">
+          <div class="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 shadow-md">
+            <i class="fa-solid fa-building-columns text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Business Credit Education</h3>
+          <p class="text-[#55606E] leading-relaxed flex-grow">Actionable steps to build, monitor, and leverage your business credit scores independent of your personal financial profile.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div id="card-service-advisory" class="flex flex-col">
+          <div class="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-5 shadow-md">
+            <i class="fa-solid fa-compass text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#0B2B18] mb-3">Ongoing Advisory</h3>
+          <p class="text-[#55606E] leading-relaxed flex-grow">Continuous support post-funding to ensure capital is deployed effectively and your business remains positioned for future rounds.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="section-how-it-works" class="py-24 bg-[#F1F5F2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0B2B18] mb-4 tracking-tight">A Guided Path From Clarity to Readiness</h2>
+        <p class="text-lg text-[#55606E]">Our proven 5-step methodology removes the guesswork from business financing.</p>
+      </div>
+
+      <div class="relative">
+        <!-- Desktop Connecting Line -->
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
+        
+        <!-- Mobile Connecting Line -->
+        <div class="md:hidden absolute top-0 left-8 w-1 h-full bg-gray-200 z-0"></div>
+
+        <div class="flex flex-col md:flex-row justify-between relative z-10 space-y-12 md:space-y-0">
+          
+          <!-- Step 1 -->
+          <div class="flex md:flex-col items-start md:items-center relative group w-full md:w-1/5">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white border-4 border-[#F1F5F2] shadow-lg flex items-center justify-center text-xl font-bold text-[#0B2B18] group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300 z-10 relative">
+              1
+            </div>
+            <div class="ml-6 md:ml-0 md:mt-6 md:text-center">
+              <h4 class="text-lg font-bold text-[#0B2B18] mb-2">Assess</h4>
+              <p class="text-sm text-[#55606E]">Comprehensive review of your current fundability status.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex md:flex-col items-start md:items-center relative group w-full md:w-1/5">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white border-4 border-[#F1F5F2] shadow-lg flex items-center justify-center text-xl font-bold text-[#0B2B18] group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300 z-10 relative">
+              2
+            </div>
+            <div class="ml-6 md:ml-0 md:mt-6 md:text-center">
+              <h4 class="text-lg font-bold text-[#0B2B18] mb-2">Plan</h4>
+              <p class="text-sm text-[#55606E]">Develop a customized roadmap to reach your funding goals.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex md:flex-col items-start md:items-center relative group w-full md:w-1/5">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white border-4 border-[#F1F5F2] shadow-lg flex items-center justify-center text-xl font-bold text-[#0B2B18] group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300 z-10 relative">
+              3
+            </div>
+            <div class="ml-6 md:ml-0 md:mt-6 md:text-center">
+              <h4 class="text-lg font-bold text-[#0B2B18] mb-2">Strengthen</h4>
+              <p class="text-sm text-[#55606E]">Optimize credit, financials, and operational metrics.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex md:flex-col items-start md:items-center relative group w-full md:w-1/5">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white border-4 border-[#F1F5F2] shadow-lg flex items-center justify-center text-xl font-bold text-[#0B2B18] group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300 z-10 relative">
+              4
+            </div>
+            <div class="ml-6 md:ml-0 md:mt-6 md:text-center">
+              <h4 class="text-lg font-bold text-[#0B2B18] mb-2">Prepare</h4>
+              <p class="text-sm text-[#55606E]">Compile flawless documentation for underwriter review.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex md:flex-col items-start md:items-center relative group w-full md:w-1/5">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white border-4 border-[#F1F5F2] shadow-lg flex items-center justify-center text-xl font-bold text-[#0B2B18] group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300 z-10 relative">
+              5
+            </div>
+            <div class="ml-6 md:ml-0 md:mt-6 md:text-center">
+              <h4 class="text-lg font-bold text-[#0B2B18] mb-2">Leverage</h4>
+              <p class="text-sm text-[#55606E]">Secure capital and deploy it strategically for growth.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="section-cta" class="relative py-20 bg-[#0B2B18] overflow-hidden">  
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#3E7B4D 1px, transparent 1px); background-size: 30px 30px;"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h3 class="text-3xl md:text-4xl font-bold text-white mb-8 tracking-tight">Your Next Opportunity Starts With a Strategy</h3>
+      <a href="https://form.road2funding.com/funding-evaluation" class="inline-block bg-white text-[#0B2B18] hover:bg-[#F1F5F2] px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-[0_0_20px_rgba(62,123,77,0.3)] hover:shadow-[0_0_30px_rgba(62,123,77,0.5)] hover:-translate-y-1">
+        Begin My Funding Evaluation
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQs SECTION -->
+  <section id="section-faqs" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0B2B18] mb-4 tracking-tight">Frequently Asked Questions</h2>
+        <p class="text-lg text-[#55606E]">Clear answers to help you understand our process.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="group border border-gray-100 bg-white rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#0B2B18] font-semibold text-lg">
+            Do you guarantee funding?
+            <span class="relative size-5 shrink-0">
+              <i class="fa-solid fa-plus absolute inset-0 opacity-100 transition-opacity group-open:opacity-0 text-[#1B4C27]"></i>
+              <i class="fa-solid fa-minus absolute inset-0 opacity-0 transition-opacity group-open:opacity-100 text-[#1B4C27]"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-[#55606E] leading-relaxed border-t border-gray-50 pt-4">
+            While no ethical firm can guarantee funding approval, our strategic preparation process significantly increases your probability of success. We ensure you meet lender criteria before you ever apply, minimizing the risk of rejection.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group border border-gray-100 bg-white rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#0B2B18] font-semibold text-lg">
+            How long does the readiness process take?
+            <span class="relative size-5 shrink-0">
+              <i class="fa-solid fa-plus absolute inset-0 opacity-100 transition-opacity group-open:opacity-0 text-[#1B4C27]"></i>
+              <i class="fa-solid fa-minus absolute inset-0 opacity-0 transition-opacity group-open:opacity-100 text-[#1B4C27]"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-[#55606E] leading-relaxed border-t border-gray-50 pt-4">
+            The timeline varies based on your current financial profile. Some businesses are ready to apply within 30 days, while others may need 3-6 months to optimize credit scores, organize financials, and build a stronger narrative.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group border border-gray-100 bg-white rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#0B2B18] font-semibold text-lg">
+            Are you a direct lender?
+            <span class="relative size-5 shrink-0">
+              <i class="fa-solid fa-plus absolute inset-0 opacity-100 transition-opacity group-open:opacity-0 text-[#1B4C27]"></i>
+              <i class="fa-solid fa-minus absolute inset-0 opacity-0 transition-opacity group-open:opacity-100 text-[#1B4C27]"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-[#55606E] leading-relaxed border-t border-gray-50 pt-4">
+            No, Road2Funding is an independent advisory and coaching firm. This allows us to remain completely objective. We work for you, not the banks, ensuring our strategies are aligned solely with your best interests.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group border border-gray-100 bg-white rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#0B2B18] font-semibold text-lg">
+            What types of businesses do you work with?
+            <span class="relative size-5 shrink-0">
+              <i class="fa-solid fa-plus absolute inset-0 opacity-100 transition-opacity group-open:opacity-0 text-[#1B4C27]"></i>
+              <i class="fa-solid fa-minus absolute inset-0 opacity-0 transition-opacity group-open:opacity-100 text-[#1B4C27]"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-[#55606E] leading-relaxed border-t border-gray-50 pt-4">
+            We work with a wide range of B2B and B2C companies, from established startups looking for growth capital to mature enterprises seeking expansion or acquisition financing. Our strategies are adaptable to various industries.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer-main" class="bg-[#0B2B18] pt-16 pb-8 border-t border-[#1B4C27]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+        
+        <!-- Brand Column -->
+        <div class="md:col-span-5">
+          <a href="#" class="footer-logo-plate mb-6" aria-label="Road2Funding Home">
+            <img src="road2funding-logo.png" alt="Road2Funding" class="footer-logo" width="1000" height="406" loading="lazy">
+          </a>
+          <p class="text-gray-300 text-sm leading-relaxed max-w-sm mb-6">
+            Empowering entrepreneurs with the strategic guidance needed to navigate the complex world of business financing and secure growth capital.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#1B4C27] transition-colors">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#1B4C27] transition-colors">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#1B4C27] transition-colors">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">Home</a></li>
+            <li><a href="#section-how-it-works" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">How It Works</a></li>
+            <li><a href="#section-services" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">Funding Programs</a></li>
+            <li><a href="#section-why-exists" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">About Us</a></li>
+            <li><a href="#section-faqs" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="md:col-span-4">
+          <h4 class="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-[#3E7B4D] text-sm transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8">
+        <p class="text-gray-400 text-xs leading-relaxed mb-4 text-justify">
+          Disclaimer: Road2Funding is not a lender, bank, or financial advisor. We provide educational coaching and strategic preparation services to help businesses improve their fundability profile. We do not guarantee loan approval, specific interest rates, or funding amounts. Any financial decisions should be made in consultation with your licensed CPA or legal counsel.
+        </p>
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm">
+            &copy; 2026 Road2Funding LLC. All rights reserved.
+          </p>
+          <p class="text-gray-400 text-sm mt-2 md:mt-0">
+            Funding Starts With Strategy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
